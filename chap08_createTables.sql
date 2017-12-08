@@ -83,8 +83,9 @@ select * from all_tables;
 select * from dba_tables;
 
 select * from user_tab_cols;
-select table_name, column_name, data_type, data_type_mod, data_length, data_precision, data_null
-from user_tab_cols;
+
+select table_name, column_name, data_type, data_type_mod, data_length, data_precision, nullable
+from user_tab_cols
 where table_name = 'EMP'
 order by column_id;
 

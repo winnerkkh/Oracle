@@ -15,6 +15,7 @@ select emp.empno as "사원 번호", emp.ename as "사원 이름",
   from emp, dept
  where emp.deptno = dept.deptno;
    
+   select * from dept;
 -- = EQUI JOIN
 select emp.empno as "사원 번호", emp.ename as "사원 이름", 
        dept.deptno as "부서 번호", dept.dname as "부서명"
@@ -91,7 +92,7 @@ select *
 -- outer join
 select e.empno, e.ename, manager.ename
   from emp e join emp manager
-    on( e.mgr = manager.empno(+)) -- 오라클 에서 제공하는 outer join방식 (+)
+    on( e.mgr = manager.empno(+)) -- 오라클 에서 제공하는 outer join방식 (+) <== 정보가 부족한쪽에 첨부
     ;
     
 select e.empno, e.ename, manager.ename
